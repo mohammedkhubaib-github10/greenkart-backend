@@ -1,8 +1,6 @@
 package com.example.greenkart.greenkart_backend.address;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+public class AddressRepository {
 
-@Repository
-public interface AddressRepository extends JpaRepository<Address, Long> {
+    
 }

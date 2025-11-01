@@ -1,10 +1,6 @@
 package com.example.greenkart.greenkart_backend.order;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-import java.util.List;
+public class OrderRepository {
 
-@Repository
-public interface OrderRepository extends JpaRepository<Order, Long> {
-    List<Order> findByCustomerId(Long customerId);
+    
 }
