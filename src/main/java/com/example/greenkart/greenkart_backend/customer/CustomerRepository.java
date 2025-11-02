@@ -52,11 +52,10 @@ public class CustomerRepository {
     }
 
     public int update(Customer customer) {
-        String sql = "UPDATE Customers SET customer_name=?, email=?, contact=? WHERE customer_id=?";
+        String sql = "UPDATE Customers SET customer_name=?, email=? WHERE customer_id=?";
         return jdbcTemplate.update(sql,
                 customer.getCustomerName(),
                 customer.getEmail(),
-                customer.getContact(),
                 customer.getCustomerId());
     }
 

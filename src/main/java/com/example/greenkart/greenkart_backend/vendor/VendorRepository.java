@@ -54,12 +54,11 @@ public class VendorRepository {
     }
 
     public int update(Vendor vendor) {
-        String sql = "UPDATE Vendors SET vendor_name=?, brand_name=?, email=?, contact=? WHERE vendor_id=?";
+        String sql = "UPDATE Vendors SET vendor_name=?, brand_name=?, email=? WHERE vendor_id=?";
         return jdbcTemplate.update(sql,
                 vendor.getVendorName(),
                 vendor.getBrandName(),
                 vendor.getEmail(),
-                vendor.getContact(),
                 vendor.getVendorId());
     }
 
