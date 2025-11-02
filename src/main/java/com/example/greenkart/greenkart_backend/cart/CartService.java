@@ -26,7 +26,7 @@ public class CartService {
     public void addItem(String customerId, String productId, int qty, double pricePerUnit) {
         createCartIfNotExists(customerId);
 
-        Cart cart = repo.findCartByCustomer(customerId).orElseThrow(() -> new RuntimeException("Cart not found"));
+        Cart cart = repo.findCartByCustomer(customerId).orElseThrow(() -> new RuntimeException("Cart not found Exception"));
         String cartId = cart.getCartId();
 
         // Vendor constraint check
